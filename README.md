@@ -1,44 +1,42 @@
-# King County House Sales Project
+# Churn Telecom Project
 
 **Authors:** Elena Burlando
 
 ## Overview
 
-The objective of this project is to analyze housing data for King County to provide insights on variables that effect sale price and also determine if there any pricing trends that can project future growth of certain markets. 
+The objective of this project is to analize Telecom Customer data in order to gain insights on what is contributing to customer churn.
 
-As an outcome of this analysis we are hoping to get: 
+As an outcome of this analysis we are aiming to get:
 
-Insights for real estate agents: 
- * Price drivers (predictors)
- * Housing market trends based on city
+* factors contributing to customer churn
+* reccommendations on preventive measures to reduce customers leaving
+
 
 ## Business Problem
 
-A local real estate agency in King County WA is looking to develop a web tool that would help clients to estimate the sale prices for their homes. This tool will be used as a marketing tool to engage and acquire new customers. Ideally, we would like to include variables that sellers can control such as staging, curb appeal, remodeling, fixture updates, the color of walls, etc. This will provide visibility to sellers on what investments can contribute to the price increase of their house.
+Telecom company is experiencing 14.5% churn of its customers. As it is costly to the company to lose every seventh of its clients and it is also costly to acquire new clients. It is important to identify why customers are leaving to come up with preventive measures.
 
-In addition, the agency is looking to develop an internal tool that would showcase current Housing Market trends. This tool will help their real estate agents to reach potential house sellers ahead of the competition and help their buying clients to get a better return on the investment.
-
-One of the main business pain points is high competition from large established and small real estate agencies in the area. Proposed tools will differentiate the agency from the competition and lead to higher engagement and sales.
+One of the main pain points for this project is the lack of industry/business knowledge.
 
 
 ## Data Understanding and Methods
 
 For this project we will be using data from: 
-* [King county house data](https://info.kingcounty.gov/assessor/esales/Glossary.aspx?type=r)
-* [Zipcode list](https://www.ciclt.net/sn/clt/capitolimpact/gw_ziplist.aspx?FIPS=53033)
+* [Telecom Churn Data](https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset)
 
 
-Predictor variables: 'date', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'sqft_above', 'sqft_basement', 'yr_built', 'yr_renovated', 'zipcode', 'lat', 'long', 'sqft_living15', 'sqft_lot15', 'waterfront', 'view', 'grade', 'condition', 'city' for house sales between 2014 and 2015 for King County WA.
+Predictors: 'state', 'account length', 'area code', 'phone number', 'international plan', 'voice mail plan', 'number vmail messages', 'total day minutes', 'total day calls', 'total day charge', 'total eve minutes', 'total eve calls', 'total eve charge', 'total night minutes', 'total night calls', 'total night charge', 'total intl minutes', 'total intl calls', 'total intl charge', 'customer service calls'
 
-* Using these sources we would be able to answer our questions listed above. 
-* The target variable is sale price.  
-* We intend to use Multiple Linear Regression to calculate formula to predict future house sale price. 
-* We will be following CRISP-DM process for this project. 
+* The target variable is churn.
+* The main score is f1.
+* We intend to use Classifiers such as Decision Tree, Random Forest, and Logistic Regression to calculate formula to predict whether a customer will churn.
+* For hyper parameter tuning we will use GridSearchCV and RandomSearchCV.
+* We will be following CRISP-DM process for this project.
 
 
 ## Data
 
-Over 21K data entries of house sales with details on house and lot specs, price, date sold, and whether a house has views and has been renovated. 
+The dataset has 21 columns (including the target column) and 3333 rows of data entries.
 
 ## Correlation between Features and Target
 ![alt text](https://github.com/rusalka013/King-County-House-Sales-Project/blob/main/Visuals/Price%20and%20Features%20Correlation.png)
