@@ -50,97 +50,70 @@ The dataset has 21 columns (including the target column) and 3333 rows of data e
 ![alt text](https://github.com/rusalka013/churn_telecom_project/blob/main/Visuals/Absolute_Feature_Average_Impact.png)
 
 
+## Insights from Global Importance of SHAP values:
+
+* High 'Total_charges' have a high positive impact on model.
+* Customer service calls have positive moderate to high impact.
+* Having international plan have positive low to high impact.
+* Low # of intl calls has positive moderate impact on model.
+* High total of intl minutes has positive medium impact.
+* High number of voice messages has low to moderate negative impact.
+* Having voice mail plan has negative low moderate effect.
+
+![alt text](https://github.com/rusalka013/churn_telecom_project/blob/main/Visuals/global_importance_of_each_feature_violin.png)
 
 
 ## Results
 
-### Price based on sqft living
-![alt text](https://github.com/rusalka013/King-County-House-Sales-Project/blob/main/Visuals/Correlation%20bw%20sqft_living%20and%20Price.png)
+### Total charges impact on churn
 
-For every 2/100 percent increase in square feet there is one percent increase in price.
+High charges lead to high probability of customer churn. 
+
+![alt text](https://github.com/rusalka013/churn_telecom_project/blob/main/Visuals/Relationships%20between%20Total_charges%20and%20churn.png)
 
 
-### Price based on condition
-![alt text](https://github.com/rusalka013/King-County-House-Sales-Project/blob/main/Visuals/Price%20vs%20Condition.png)
+### Customer service calls impact on churn
 
-Price change based on condition in comparison to Average:
-* -13.8% Fair
-* +6.7% Good
-* +16% Very Good!
+4+ customer service calls lead to moderate to high likelihood of churn regardless if total charges are low or high. 
+
+![alt text](https://github.com/rusalka013/churn_telecom_project/blob/main/Visuals/Relationships_between_customer%20service%20calls_and_churn.png)
  
 
-## Price based on grade
-![alt text](https://github.com/rusalka013/King-County-House-Sales-Project/blob/main/Visuals/Price%20vs%20Grade.png)
+## International plan impact on churn
 
-Price change based on a grade in comparison to Very Good:
-* +6.6% Excellent 
-* -7% Better
-* -22.7% Good
-* -38% Average
-* -56.7% Low Average
-* -64.4% Fair
+Customers with current international plans and low international calls are more likely to churn.
+
+![alt text](https://github.com/rusalka013/churn_telecom_project/blob/main/Visuals/Relationships_between_international%20plan_and_churn.png)
+
  
 
-## Price based on month: 
-![alt text](https://github.com/rusalka013/King-County-House-Sales-Project/blob/main/Visuals/Price%20vs%20Month.png)
+## Voice mail plan impact on churn 
 
-Price change based on a month in comparison to January:
-* +4.2% March
-* +6.1% April
-* +7.8% May
-* +9.5% June
-* +8.5% July
-* +8% August
-* +8.3% September
-* +9% October
-* +8.2% November
-* +7.9% December
- 
+Clients without voice mail plan are 10% more likely to churn vs those with one.
 
-## Price based on city:
-![alt text](https://github.com/rusalka013/King-County-House-Sales-Project/blob/main/Visuals/Price%20vs%20City.png)
-
-Price change based on a city in comparison to Auburn:
-* +64.1% Bellevue
-* +42.3% Bothell
-* +35.2% Duvall
-* +9.7% Enumclaw
-* +53.7% Issaquah
-* +5.1% Kent
-* +63.5% Kirkland
-* +17.8% Maple Valley
-* +85.8% Mercer Island
-* +36.5% North Bend
-* +58.2% Redmond
-* +24.5% Renton
-* +64.7% Seattle
-* +46.8% Shoreline
-* +42.2% Snoqualmie
-* +18.2% Tukwila
-* +48.2% Woodinville
-* +108.6 Yarrow Point
+![alt text](https://github.com/rusalka013/churn_telecom_project/blob/main/Visuals/Relationships_between_voice%20mail%20plan_and_churn.png)
 
 
 ## Conclusions
 
-Business Recommendations for customers (sellers): 
+Business Recommendations: 
 
-* condition: 
-Perform maintenance and upgrades to increase price by up to 16% (from Average to Very Good).   
+* total charges: 
+Offer package plans for users with high usage. On a current plan high usage leads to high charges which are highly correlated with churn.
 
-* grade: 
-Renovate a house to increase the price by up to 71% (ex.renovating a house from Fair to Very Good grade will increase the value by 64%). However, additional calculaltions on ROI has to be done prior to this suggestion.  
+* customer service calls: 
+Improve customer service call experience by looking closely into customer service call support to gain a more granular understanding on what is driving customers to churn. 2+ customer service calls lead to moderate to high likelihood of churn regardless of total charges.
 
-* month: 
-Sell a house in summer to early fall months for up to 9.5% higher in price. Best months to sell are June and October.  
- 
-* city: 
-Houses in cities south of Seattle sell for at least 20% lower compare to houses West and North. 
+* voice mail: 
+Offer voice mail plan. Clients without voice mail plan are 10% more likely to churn vs those with one.
+
+* international plan: 
+Offer different international plans based on usage: low, medium, high. Customers with current international plans and low international calls are more likely to churn.
 
 Next Steps:  
-* To acquire additional feature information (such as staged or not staged, fixture updates, curb appeal, color of interior and exterior walls, etc) regarding houses sold. Adding these features to our model can further expand agent's knowledge on what suggestions to make to clients that could increase the house value. 
-* To get more recent house data through APIs (redfin API) to understand Housing Market trends in the past 20 years.   
-
+* To gain a better understanding of the Telecom plans through business stakeholders.
+* Obtain more break down data on customer service calls such as waiting time, whether a customer issue has been resolved, what are the issues that customers called for, etc.
+* To compare Telecom's pricing structure and plans with competitors.
 
 
 
