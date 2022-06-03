@@ -38,8 +38,18 @@ Predictors: 'state', 'account length', 'area code', 'phone number', 'internation
 
 The dataset has 21 columns (including the target column) and 3333 rows of data entries.
 
-## Correlation between Features and Target
-![alt text](https://github.com/rusalka013/King-County-House-Sales-Project/blob/main/Visuals/Price%20and%20Features%20Correlation.png)
+## Features contributing to model output:
+
+* Total charges
+* Customer service calls
+* International plan 
+* Total international calls
+* Voice mail plan
+* Number vmail messages
+
+![alt text](https://github.com/rusalka013/churn_telecom_project/blob/main/Visuals/Absolute_Feature_Average_Impact.png)
+
+
 
 
 ## Results
